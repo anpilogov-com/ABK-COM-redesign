@@ -39,6 +39,8 @@ body {
    overflow-y: hidden;
    overflow-x: scroll;
    height: 100%;
+
+   @extend %Regular-font;
 }
 
 .header {
@@ -488,4 +490,52 @@ body.touch .list__item > a {
 
 body.touch #menu_item4 {
    padding-right: 0px;
+}
+
+/* Сontent */
+
+.content {
+   display: block;
+   width: 100%;
+   height: 100%;
+   padding-top: 120px;
+}
+
+@media #{$media} and ($feature: $value-1) {
+   .content {
+      padding-top: 86px;
+   }
+}
+
+.content__wrapper {
+   max-width: 936px;
+   margin: 0px auto;
+   padding-left: 14px;
+   padding-right: 14px;
+   padding-top: 0px;
+}
+
+@media #{$media} and ($feature: $value-1) {
+   .content__wrapper {
+      padding-top: 14px;
+   }
+}
+
+/* Slider */
+
+.slider {
+   display: flex;
+
+   height: 292px;
+
+   margin-top: 80px;
+
+   border-radius: 5px;
+   background-color: $color-secondary-light;
+}
+
+@media #{$media} and ($feature: $value-1) {
+   .slider {
+      margin-top: 0px;
+   }
 }

@@ -27,12 +27,21 @@ let isMobile = {
 
 let body = document.querySelector("body");
 
+let burger = document.querySelector(".header__burger");
+
+burger.addEventListener("click", () => {
+   document.querySelector(".header__burger").classList.toggle("active");
+   document.querySelector(".header__menu").classList.toggle("active");
+   document.querySelector(".header__top").classList.toggle("active");
+   document.querySelector(".header__bottom").classList.toggle("active");
+   document.querySelector(".container").classList.toggle("active");
+   document.querySelector(".header").classList.toggle("active");
+});
+
 if (isMobile.any()) {
    body.classList.add("touch");
 
    let arrow = document.querySelectorAll(".arrow");
-
-   let burger = document.querySelector(".header__burger");
 
    for (let index = 0; index < arrow.length; index++) {
       let thisLink = arrow[index].previousElementSibling;
